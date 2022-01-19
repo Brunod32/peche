@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des pêches{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Liste des pêches</h1>
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom du pêcheur</th>
+                <th>Race de poisson</th>
+                <th>Lieu</th>
+                <th>Date</th>
+                <th>Leurre utilisé</th>
+                <th>Photo</th>
+                <th>Météo</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fishing in fishings %}
+            <tr>
+                <td>{{ fishing.id }}</td>
+                <td>{{ fishing.fisherName }}</td>
+                <td>{{ fishing.fishRace }}</td>
+                <td>{{ fishing.place }}</td>
+                <td>{{ fishing.date ? fishing.date|date('d-m-Y') : '' }}</td>
+                <td>{{ fishing.lure }}</td>
+                <td>{{ fishing.picture }}</td>
+                <td>{{ fishing.weather }}</td>
+                <td>
+                    <a href="{{ path('fishing_show', {'id': fishing.id}) }}">Voir</a>
+                    <br>
+                    <a href="{{ path('fishing_edit', {'id': fishing.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">Pas de pêche enregistrée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('fishing_new') }}" role="button" class="btn btn-primary m-5">Créer une nouvelle pêche</a>
+{% endblock %}

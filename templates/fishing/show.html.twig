@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail de la pêche{% endblock %}
+
+{% block body %}
+    <h1>Détail de la pêche {{ fishing.id }}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fishing.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom du pêcheur</th>
+                <td>{{ fishing.fisherName }}</td>
+            </tr>
+            <tr>
+                <th>Race de poisson</th>
+                <td>{{ fishing.fishRace }}</td>
+            </tr>
+            <tr>
+                <th>Lieu</th>
+                <td>{{ fishing.place }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ fishing.date ? fishing.date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Leurre utilisé</th>
+                <td>{{ fishing.lure }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ fishing.picture }}</td>
+            </tr>
+            <tr>
+                <th>Météo</th>
+                <td>{{ fishing.weather }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('fishing_index') }}" role="button" class="btn btn-success m-5">Retour à la liste</a>
+
+    <a href="{{ path('fishing_edit', {'id': fishing.id}) }}" role="button" class="btn btn-primary m-5">Modifier</a>
+
+    {{ include('fishing/_delete_form.html.twig') }}
+{% endblock %}

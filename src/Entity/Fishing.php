@@ -28,9 +28,6 @@ class Fishing
     #[ORM\Column(type: 'string', length: 30)]
     private $lure;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $picture;
-
     #[ORM\Column(type: 'string', length: 30)]
     private $weather;
 
@@ -95,18 +92,6 @@ class Fishing
     public function setLure(string $lure): self
     {
         $this->lure = $lure;
-
-        return $this;
-    }
-
-    public function getPicture(): ?string
-    {
-        return $this->picture;
-    }
-
-    public function setPicture(?string $picture): self
-    {
-        $this->picture = $picture;
 
         return $this;
     }

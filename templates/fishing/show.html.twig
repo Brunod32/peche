@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Détail de la pêche{% endblock %}
+{% block title %}Détail des pêches{% endblock %}
 
 {% block body %}
     <h1>Détail de la pêche {{ fishing.id }}</h1>
@@ -25,15 +25,11 @@
             </tr>
             <tr>
                 <th>Date</th>
-                <td>{{ fishing.date ? fishing.date|date('Y-m-d') : '' }}</td>
+                <td>{{ fishing.date ? fishing.date|date('d-m-Y') : '' }}</td>
             </tr>
             <tr>
                 <th>Leurre utilisé</th>
                 <td>{{ fishing.lure }}</td>
-            </tr>
-            <tr>
-                <th>Photo</th>
-                <td>{{ fishing.picture }}</td>
             </tr>
             <tr>
                 <th>Météo</th>

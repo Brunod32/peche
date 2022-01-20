@@ -19,7 +19,6 @@ class FishingType extends AbstractType
             ->add('place', TextType::class)
             ->add('date', DateType::class)
             ->add('lure', TextType::class)
-            ->add('picture')
             ->add('weather', TextType::class)
         ;
     }

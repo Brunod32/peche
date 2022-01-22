@@ -12,8 +12,8 @@
     </div>
 
     {{ include('fishing/_form.html.twig', {'button_label': 'Modifier'}) }}
-
-    <a href="{{ path('fishing_index') }}" role="button" class="btn btn-success m-5">Retour à la liste</a>
+    
+    <a href="{{ path('fishing_index') }}" role="button" class="btn btn-success ml-5 mt-2">Retour à la liste</a>
 
     {{ include('fishing/_delete_form.html.twig') }}
 {% endblock %}

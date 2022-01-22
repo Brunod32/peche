@@ -12,40 +12,41 @@
         </div>
     </div>
 
-    <table class="table">
-        <tbody>
-            {# <tr>
-                <th>Id</th>
-                <td>{{ fishing.id }}</td>
-            </tr> #}
-            <tr>
-                <th>Nom du pêcheur</th>
-                <td>{{ fishing.fisherName }}</td>
-            </tr>
-            <tr>
-                <th>Race de poisson</th>
-                <td>{{ fishing.fishRace }}</td>
-            </tr>
-            <tr>
-                <th>Lieu</th>
-                <td>{{ fishing.place }}</td>
-            </tr>
-            <tr>
-                <th>Date</th>
-                <td>{{ fishing.date ? fishing.date|date('d-M-Y') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Leurre utilisé</th>
-                <td>{{ fishing.lure }}</td>
-            </tr>
-            <tr>
-                <th>Météo</th>
-                <td>{{ fishing.weather }}</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <a href="{{ path('fishing_index') }}" role="button" class="btn btn-success m-5">Retour à la liste</a>
+    <div class="m-5">
+        <table class="table">
+            <tbody>
+                {# <tr>
+                    <th>Id</th>
+                    <td>{{ fishing.id }}</td>
+                </tr> #}
+                <tr>
+                    <th>Nom du pêcheur</th>
+                    <td>{{ fishing.fisherName }}</td>
+                </tr>
+                <tr>
+                    <th>Variété de poisson</th>
+                    <td>{{ fishing.fishRace }}</td>
+                </tr>
+                <tr>
+                    <th>Lieu</th>
+                    <td>{{ fishing.place }}</td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td>{{ fishing.date ? fishing.date|date('d-M-Y') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Leurre utilisé</th>
+                    <td>{{ fishing.lure }}</td>
+                </tr>
+                <tr>
+                    <th>Météo</th>
+                    <td>{{ fishing.weather }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+    <a href="{{ path('fishing_index') }}" role="button" class="btn btn-success mt-0 mb-0 ml-5">Retour à la liste</a>
 
     {# <a href="{{ path('fishing_edit', {'id': fishing.id}) }}" role="button" class="btn btn-primary">Modifier</a> #}
 

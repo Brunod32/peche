@@ -1,4 +1,9 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+    {{ form_row(form.fisherName, { 'label': 'Nom du pêcheur'}) }}
+    {{ form_row(form.fishRace, { 'label': 'Variété de poisson'}) }}
+    {{ form_row(form.place, { 'label': 'Lieu'}) }}
+    {{ form_row(form.date, { 'label': 'Date'}) }}
+    {{ form_row(form.lure, { 'label': 'Leurre utilisé'}) }}
+    {{ form_row(form.weather, { 'label': 'Météo'}) }}
     <button role="button" class="btn btn-primary ml-5">{{ button_label|default('Enregistrer') }}</button>
 {{ form_end(form) }}

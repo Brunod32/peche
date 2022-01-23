@@ -19,8 +19,8 @@
                 <th>Variété de poisson</th>
                 <th>Lieu</th>
                 <th>Date</th>
-                <th>Leurre utilisé</th>
-                <th>Météo</th>
+                {# <th>Leurre utilisé</th>
+                <th>Météo</th> #}
                 <th>actions</th>
             </tr>
         </thead>
@@ -31,11 +31,11 @@
                 <td>{{ fishing.fisherName }}</td>
                 <td>{{ fishing.fishRace }}</td>
                 <td>{{ fishing.place }}</td>
-                <td>{{ fishing.date ? fishing.date|date('d-M-Y') : '' }}</td>
-                <td>{{ fishing.lure }}</td>
+                {# <td>{{ fishing.date ? fishing.date|date('d-M-Y') : '' }}</td>
+                <td>{{ fishing.lure }}</td> #}
                 <td>{{ fishing.weather }}</td>
                 <td>
-                    <a href="{{ path('fishing_show', {'id': fishing.id}) }}">Voir</a>
+                    <a href="{{ path('fishing_show', {'id': fishing.id}) }}">Details de la pêche</a>
                     <br>
                     <a href="{{ path('fishing_edit', {'id': fishing.id}) }}">Modifier</a>
                 </td>

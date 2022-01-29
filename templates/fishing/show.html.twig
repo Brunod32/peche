@@ -46,10 +46,13 @@
                 </tr>
             </tbody>
         </table>
-    </div>    
-    <a href="{{ path('fishing_index') }}" role="button" class="btn btn-success mt-0 mb-0 ml-5">Retour à la liste</a>
+    </div> 
+    <div class="ms-5">
+        <a href="{{ path('fishing_index') }}" role="button" class="btn btn-success mt-2 mb-0">Retour à la liste</a>
 
-    {# <a href="{{ path('fishing_edit', {'id': fishing.id}) }}" role="button" class="btn btn-primary">Modifier</a> #}
-
-    {{ include('fishing/_delete_form.html.twig') }}
+        {{ include('fishing/_delete_form.html.twig') }}
+    </div>
+    <div class="mt-4">
+        {{ include('_footer.html.twig') }}
+    </div>
 {% endblock %}

@@ -15,7 +15,9 @@
         <div class="m-5">
             {{ include('fishing/_form.html.twig') }}
 
-            <a href="{{ path('fishing_index') }}" role="button" class="btn btn-success m-5">Retour à la liste</a>
+            <a href="{{ path('fishing_index') }}" role="button" class="btn btn-success mt-2">Retour à la liste</a>
         </div>
     </div>
+
+    {{ include('_footer.html.twig') }}
 {% endblock %}

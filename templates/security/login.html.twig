@@ -3,8 +3,8 @@
 {% block title %}S'identifier{% endblock %}
 
 {% block body %}
-<div class="container-fluid">
-    <div class="m-5">
+<div class="container-fluid row justify-content-center">
+    <div class="m-5 col-6">
         <div class="mb-10">
             <form method="post">
                 {% if error %}
@@ -17,7 +17,7 @@
                     </div>
                 {% endif %}
 
-                <h1 class="h3 mb-3 font-weight-normal">Veuillez vous connecter</h1>
+                <h1 class="h3 mb-3 font-weight-normal text-center">Veuillez vous connecter</h1>
                 <label for="inputUsername">Votre nom d'utilisateur</label>
                 <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus>
                 <label for="inputPassword">Mot de passe</label>

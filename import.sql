@@ -1,0 +1,20 @@
+CREATE TABLE fishing (
+    id INT AUTO_INCREMENT NOT NULL,
+    fisher_name VARCHAR(30) NOT NULL,
+    fish_race VARCHAR(50) NOT NULL,
+    place VARCHAR(100) NOT NULL,
+    date DATE NOT NULL,
+    lure VARCHAR(30) NOT NULL,
+    picture VARCHAR(255) DEFAULT NULL,
+    weather VARCHAR(30) NOT NULL,
+    PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB
+);
+
+CREATE TABLE user (
+    id INT AUTO_INCREMENT NOT NULL,
+    username VARCHAR(180) NOT NULL,
+    roles JSON NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    UNIQUE INDEX UNIQ_8D93D649F85E0677 (username),
+    PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB
+);

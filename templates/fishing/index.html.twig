@@ -11,46 +11,48 @@
             </div>
         </div>
     </div>
-<div class="m-5">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom du pêcheur</th>
-                <th>Variété de poisson</th>
-                <th>Lieu</th>
-                {# <th>Date</th>
-                <th>Leurre utilisé</th>
-                <th>Météo</th> #}
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for fishing in fishings %}
-            <tr>
-                <td>{{ fishing.id }}</td>
-                <td>{{ fishing.fisherName }}</td>
-                <td>{{ fishing.fishRace }}</td>
-                <td>{{ fishing.place }}</td>
-                {# <td>{{ fishing.date ? fishing.date|date('d-M-Y') : '' }}</td>
-                <td>{{ fishing.lure }}</td> 
-                <td>{{ fishing.weather }}</td> #}
-                <td>
-                    <a href="{{ path('fishing_show', {'id': fishing.id}) }}">Details de la pêche</a>
-                    <br>
-                    <a href="{{ path('fishing_edit', {'id': fishing.id}) }}">Modifier</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="9">Pas de pêche enregistrée</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</div>
-    <a href="{{ path('fishing_new') }}" role="button" class="btn btn-primary m-5">Créer une nouvelle pêche</a>
-
-    {{ include('_footer.html.twig') }}
+    <div class="m-5">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom du pêcheur</th>
+                    <th>Variété de poisson</th>
+                    <th>Lieu</th>
+                    {# <th>Date</th>
+                    <th>Leurre utilisé</th>
+                    <th>Météo</th> #}
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for fishing in fishings %}
+                <tr>
+                    <td>{{ fishing.id }}</td>
+                    <td>{{ fishing.fisherName }}</td>
+                    <td>{{ fishing.fishRace }}</td>
+                    <td>{{ fishing.place }}</td>
+                    {# <td>{{ fishing.date ? fishing.date|date('d-M-Y') : '' }}</td>
+                    <td>{{ fishing.lure }}</td> 
+                    <td>{{ fishing.weather }}</td> #}
+                    <td>
+                        <a href="{{ path('fishing_show', {'id': fishing.id}) }}">Details de la pêche</a>
+                        <br>
+                        <a href="{{ path('fishing_edit', {'id': fishing.id}) }}">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="9">Pas de pêche enregistrée</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
     
+    <div class="m-5">
+        <a href="{{ path('fishing_new') }}" role="button" class="btn btn-primary m-5">Créer une nouvelle pêche</a>
+    </div>
+    {{ include('_footer.html.twig') }}
+
 {% endblock %}
